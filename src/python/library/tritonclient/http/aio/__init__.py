@@ -117,7 +117,7 @@ class InferenceServerClient(InferenceServerClientBase):
         self._stub = aiohttp.ClientSession(
             connector=self._conn,
             timeout=aiohttp.ClientTimeout(total=conn_timeout),
-            auto_decompress=False,
+            auto_decompress=True,
         )
         self._verbose = verbose
 
